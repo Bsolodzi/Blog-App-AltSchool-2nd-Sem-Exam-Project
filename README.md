@@ -16,4 +16,8 @@ A blogging app created using python framework Flask and SQLAlchemy databases.
 6. Each post shows the title, author,content and the date and time at which the post was made and committed to the database.
 7. UI is simple. Hence, very easy to navigate.
 
-## 
+## Collaborations 
+Though this project is my end of second semester exams project at AltSchool Africa, I will be constantly working on adding more features and also giving it a better UI.
+I am looking forward to collaborating with frontend developers and also backend developers who would be interested to contribute.
+
+Should you see anything you want to point out, whether a bug or suggestion please feel free to reach out to me via [email](bsolodzi@gmail.com).
