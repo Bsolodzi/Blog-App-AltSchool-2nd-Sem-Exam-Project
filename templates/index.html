@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if current_user.is_authenticated %}
+<div class= "form-group">
+    <h1 class = 'headings'> Hey {{current_user.username}}! You've been logged in.</h1>
+    <hr>
+    <h2 class = 'headings'> Want to contribute?
+        <a href="{{url_for('create_blog')}}"> Click here</a> 
+    </h2>
+    <hr>
+</div>
+{% endif %} 
+    <h1 class = 'headings'>Welcome!!!</h1>
+    
+{% for post in blogposts %} 
+    <div class= "blogs">
+        <article class = "index-article">
+            <div class="form-group">
+                <div>
+                    <h2> {{post.title}} </h2>
+                </div>
+                <div>
+                    <h3> {{post.content}} </h3>
+                </div>
+                <div>
+                    <h3> By {{post.author}} on {{post.created_at}} </h3>
+                </div>
+            </div>
+            <div >
+                <a href="/view_blog/{{post.id}}/" class="mybtn"> View</a>              
+            </div>
+        </article>
+    </div>
+{% endfor %} 
+{% endblock content %}

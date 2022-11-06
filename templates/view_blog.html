@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action= "/view_blog/{{blogposts.id}}" method = 'POST' >
+    <article class= "view-article">
+        <div class="form-group">
+            <h1> {{blogposts.title}} </h1>
+        </div>
+        <div class="form-group">
+            <h3> {{blogposts.content}} </h3>
+        </div>
+        <div class="form-group">
+            <h3> By {{blogposts.author}} at {{blogposts.created_at}} </h3>
+        </div>
+    </article>
+    <div class="form-group">
+        {% if current_user.username == blogposts.author and current_user.is_authenticated %}
+            <div class="form-group">
+                <a href="/delete/{{blogposts.id}}/" class="mybtn">DELETE BLOG</a>
+                <a href="/update/{{blogposts.id}}/" class="mybtn">EDIT BLOG</a>   
+            </div>                
+        {% endif  %}   
+            <div>
+                <small class="form-group">
+                    Go back to homepage? <a href="{{url_for('index')}}" >Home</a>
+                </small>                         
+            </div>
+    </div>
+</form>
+{% endblock content %}

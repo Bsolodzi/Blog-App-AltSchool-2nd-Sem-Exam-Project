@@ -1,0 +1,146 @@
+*{
+    font-family: system-ui,  'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: underline;
+    margin: 0 3px;
+}
+
+header{
+    background-color: rgb(73, 55, 55);
+    padding: 5px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+header a {
+    float: left;
+    text-align: right;
+    color: #000;
+    text-decoration: wheat;
+    font-size: 18px;
+    font-size: 19px;
+    padding: 5px 5px;
+    border: 0;
+    transition: all 1.2s;
+}
+
+.logo a{
+    color: white;
+}
+
+.nav-item a{
+    margin: 10px;
+    color: white;
+    padding: 5px 10px;
+    
+}
+
+.nav-item a:hover {
+    transition: all 1.8s;
+    background-color: rgb(16, 15, 13);
+    border-radius: 35px;
+}
+
+main{
+    min-height: 100vh;
+    
+}
+
+.form{
+    width: 100%;
+    margin: auto 0px;
+    align-items: center;
+}
+
+form {
+    width:auto;
+    
+}
+
+.form-group{
+    padding: 12px 10px;
+}
+
+.form-group div {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-control{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    justify-content: center;
+}
+
+.mybtn{
+    padding: 10px 20px;
+    background-color: rgb(51, 34, 34);
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all 1.5s;
+    text-decoration: none;    
+}
+
+.mybtn:hover{
+    background-color: rgb(110, 35, 35);
+    border-radius: 35px;
+}
+
+.container{
+    margin:10px auto;
+    width: 80%;
+    border: 2px rgb(108, 76, 76) solid;
+}
+
+input {
+    border-radius: 10px;
+    align-items: left;
+    text-align: left;
+    font-size: 15px;
+}
+
+footer{
+    padding: 20px;
+    background-color: rgb(73, 55, 55);
+    color: white;
+}
+
+.message{
+    color:'red';
+    
+}
+
+.index-article {
+    display: flex;
+    text-align: left;
+    margin: 3px 10px;
+    background-color: rgb(117, 90, 95);
+    border-radius: 10px;
+}
+
+article a {
+    margin: 20px;
+}
+
+h1, h2, h3, p {
+    margin: 5px 10px;
+    text-align: center;
+}
+
+.headings {
+    text-align: center;
+    margin: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}

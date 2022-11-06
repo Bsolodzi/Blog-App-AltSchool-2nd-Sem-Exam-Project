@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="{{url_for('login')}}" method="POST">
+        <div class="form-group">
+            <h1>Login</h1>
+        </div>
+        <div class="form-group">
+            <label for="Username">Username:</label>
+            <input type="text" name="username" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="Password">Password:
+            <input type="password" name="password" class="form-control" required>
+            </label>
+        </div>
+        <small class="form-group">
+            Forgot Password? <a href="{{url_for('profile')}}" class="">Reset here</a>
+        </small>
+        <div class="form-group">
+            <input type="submit" value="Login" class="mybtn">
+        </div>
+        <div class="form-group">
+            <small>
+                Don't have an account? <a href="{{url_for('register')}}">Create one</a>
+            </small>
+        </div>
+    </form>
+{% endblock content %}

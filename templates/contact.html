@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<form class="form-contact">
+    <div class="welcome" id="welcome">
+        <h1>For more enquiries/information:</h1>
+        <p>Please fill the form below</>
+    </div>
+            
+    <div class= "form-group">
+        <label for="Name">Name</label>
+        <input type="Name" class="Name" id="name" placeholder="Enter Your Name" required>
+    </div>
+            
+    <div class= "form-group">
+        <label for="email">Email</label>
+        <input type="email" class="email" id="email" placeholder="Enter Your Email" required>
+    </div>
+            
+    <div class= "form-group">
+        <label for="message">Message</label>
+        <input type="text" class="message" id="message" placeholder="Type your message here" required>
+    </div>
+            
+    <div class= "form-group">
+        <label for="priority">Priority</label>
+        <select name="priority" id="priority">
+        <option value="text">Important</option>
+        <option value="Talk to our customer service">Very Important</option>
+        <option value="text">Not Important</option>
+        <option value="text"> Get in touch</option>
+        <option value="text">Add me to newsletter database</option>
+        </select>
+    </div>
+            
+    <div class= "form-group">
+         <input type="submit" value="Send Message" class="mybtn" >
+    </div>
+
+    <small class= "form-group">
+        Go back to homepage? <a href="{{url_for('index')}}" class="">Home</a>
+    </small> 
+            
+</form>
+{% endblock content %}

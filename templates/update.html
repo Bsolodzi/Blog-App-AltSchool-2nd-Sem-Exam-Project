@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Update your blog here</h1>
+    <form action="/update/{{blogposts.id}}" method="POST">
+        <div class= "form-group">
+            <label for="Title">Title for article:</label>
+            <input type="text" name="title" class="form-control" value="{{blogposts.title}}" >
+        </div>
+        
+        <div class= "form-group">
+            <label for="blog_content">Content of your article:</label>
+            <input type="text" name="content" class="form-control" value="{{blogposts.content}}" >
+        </div>
+        <div class="form-group">            
+            <input type="submit" value="Update Blog" class="mybtn" >
+        </div>
+        <div class="form-group">
+            <small>
+                Go back to homepage? <a href="{{url_for('index')}}">Home</a>
+            </small>
+        </div>
+    </form>
+{% endblock content %}

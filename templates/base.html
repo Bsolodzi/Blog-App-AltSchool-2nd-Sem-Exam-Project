@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/main.css')}}">
+    <title>Let's Blog</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/"><h2>Let's Blog</h2></a>
+        </div>
+        <div class="nav-item">
+            {% if current_user.is_authenticated %}
+                <a href="{{url_for('index')}}">Home</a>
+                <a href="{{url_for('profile')}}">Profile</a>
+                <a href="{{url_for('logout')}}">Logout</a>
+                <a href="{{url_for('contact')}}">Contact Us</a>
+
+            {% else %}
+                <a href="{{url_for('index')}}">Home</a>
+                <a href="{{url_for('register')}}">Sign up</a>
+                <a href="{{url_for('login')}}">Log in</a>
+                <a href="{{url_for('contact')}}">Contact Us</a>
+            {% endif %}
+        </div>
+    </header>
+    <main class="container">
+        {% block content %}
+            
+        
+        {% endblock content %}
+    </main>
+    <footer>
+        <p class="footer">
+            <center> 
+                &copy; S.B_Kwame (@bsolodzi on Github) <script>
+                    document.write(new Date().getFullYear())
+                </script>  
+            <p>AltSchool Africa</p>
+            </center>
+        </p>
+    </footer>
+</body>
+</html>
