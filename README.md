@@ -21,3 +21,5 @@ Though this project is my end of second semester exams project at AltSchool Afri
 I am looking forward to collaborating with frontend developers and also backend developers who would be interested to contribute.
 
 Should you see anything you want to point out, whether a bug or suggestion please feel free to reach out to me via [email](bsolodzi@gmail.com).
+
+## I wrote an article on how to build this blog app from scratch. read it [here](https://bsolodzi.hashnode.dev/building-a-simple-blog-app-with-flask-and-flasksqlalchemy)
